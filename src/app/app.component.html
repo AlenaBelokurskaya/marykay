@@ -16,7 +16,8 @@
     <td>{{unitOfProduction.name}}</td>
     <td>{{unitOfProduction.description}}</td>
     <td>{{unitOfProduction.price}}</td>
-    <td>{{unitOfProduction.inStock}}</td>
+    <td *ngIf="unitOfProduction.inStock > 0">{{unitOfProduction.inStock}}</td>
+    <td *ngIf="unitOfProduction.inStock === 0">нет на складе</td>
   </tr>
   </tbody>
 </table>
