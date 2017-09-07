@@ -1,11 +1,13 @@
 <h2>{{title}}</h2>
+<p>Общее количество продукции: {{totalUnitOfProductions()}}.</p>
 <table class="table table-bordered">
   <thead>
   <tr>
     <th>id</th>
-    <th>name</th>
-    <th>description</th>
-    <th>price</th>
+    <th>Наименование</th>
+    <th>Срок годности</th>
+    <th>Цена</th>
+    <th>Количество</th>
   </tr>
   </thead>
   <tbody>
@@ -14,6 +16,7 @@
     <td>{{unitOfProduction.name}}</td>
     <td>{{unitOfProduction.description}}</td>
     <td>{{unitOfProduction.price}}</td>
+    <td>{{unitOfProduction.inStock}}</td>
   </tr>
   </tbody>
 </table>
