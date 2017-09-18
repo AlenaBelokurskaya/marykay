@@ -11,6 +11,7 @@ export class AppComponent {
   
   unitOfProductions = [{
     "id": 1,
+    "image": "assets/images/test-1.jpg",
     "name": "Очищающий гель Botanical Effects",
     "description": "10/18",
     "price": 27.00,
@@ -18,6 +19,7 @@ export class AppComponent {
   },
   {
     "id": 2,
+    "image": "assets/images/test-2.jpg",
     "name": "Тонизирующий скраб Botanical Effects",
     "description": "08/19",
     "price": 33.00,
@@ -25,6 +27,7 @@ export class AppComponent {
   },
   {
     "id": 3,
+    "image": "assets/images/test-1.jpg",
     "name": "Освежающий тоник Botanical Effects",
     "description": "10/19",
     "price": 27.00,
@@ -32,6 +35,7 @@ export class AppComponent {
   },
   {
     "id": 4,
+    "image": "assets/images/test-2.jpg",
     "name": "Увлажняющий гель Botanical Effects",
     "description": "05/18",
     "price": 33.00,
