@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'Уход за лицом';
+  title = 'Склад';
   
   unitOfProductions = [{
     "id": 1,
