@@ -7,10 +7,11 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'Уход за лицом';
+  title = 'Склад';
   
   unitOfProductions = [{
     "id": 1,
+    "category": "уход за кожей лица",
     "image": "assets/images/test-1.jpg",
     "name": "Очищающий гель Botanical Effects",
     "description": "10/18",
@@ -18,7 +19,8 @@ export class AppComponent {
     "inStock": 5
   },
   {
-    "id": 2,
+    "id": 2, 
+    "category": "уход за кожей лица",
     "image": "assets/images/test-2.jpg",
     "name": "Тонизирующий скраб Botanical Effects",
     "description": "08/19",
@@ -27,6 +29,7 @@ export class AppComponent {
   },
   {
     "id": 3,
+    "category": "уход за кожей лица",
     "image": "assets/images/test-1.jpg",
     "name": "Освежающий тоник Botanical Effects",
     "description": "10/19",
@@ -35,6 +38,7 @@ export class AppComponent {
   },
   {
     "id": 4,
+    "category": "уход за кожей лица",
     "image": "assets/images/test-2.jpg",
     "name": "Увлажняющий гель Botanical Effects",
     "description": "05/18",

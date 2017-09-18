@@ -4,7 +4,8 @@
   <thead>
   <tr>
     <th>id</th>
-    <th></th>
+    <th>Категория</th>
+    <th>Картинка</th>
     <th>Наименование</th>
     <th>Срок годности</th>
     <th>Цена</th>
@@ -14,6 +15,7 @@
   <tbody>
   <tr *ngFor="let unitOfProduction of unitOfProductions">
     <td>{{unitOfProduction.id}}</td>
+    <td>{{unitOfProduction.category}}</td>
     <td><img width="50px;" src="{{unitOfProduction.image}}"></td>
     <td>{{unitOfProduction.name}}</td>
     <td>{{unitOfProduction.description}}</td>
