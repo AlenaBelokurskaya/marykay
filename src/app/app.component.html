@@ -1,9 +1,9 @@
 <h2>{{title}}</h2>
-<select class="form-control" ng-model="selectTag">
-  <option ng-repeat="tag in tags" ng-bind="tag.name"></option>
+<select class="form-control">
+  <option *ngFor="let tag in tags" [ngValue]="categoty"></option>
 </select>
 <p>Общее количество продукции: {{totalUnitOfProductions()}}.</p>
-<table ng-repeat="tag in unitOfProductions | filter :selectTag" class="table table-bordered">
+<table class="table table-bordered">
   <thead>
   <tr>
     <th>id</th>
@@ -17,6 +17,7 @@
   </thead>
   <tbody>
   <tr *ngFor="let unitOfProduction of unitOfProductions">
+  <!--<tr *ngFor="let unitOfProduction of unitOfProductions | myfilter:tags">-->
     <td>{{unitOfProduction.id}}</td>
     <td>{{unitOfProduction.category}}</td>
     <td><img width="50px;" src="{{unitOfProduction.image}}"></td>

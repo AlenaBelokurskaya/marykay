@@ -10,12 +10,10 @@ export class AppComponent {
   title = 'Склад';
 
   tags = [
-    {name:'уход за кожей лица'},
-    {name:'декоративная косметика'},
-    {name:'парфюмерия'}
+    {category:'уход за кожей лица'},
+    {category:'декоративная косметика'},
+    {category:'парфюмерия'}
   ];
-  
-  selectTag = null;
 
   unitOfProductions = [{
     "id": 1,
@@ -54,13 +52,13 @@ export class AppComponent {
     "inStock": 0
   },
   {
-      "id": 5,
-      "category": "декоративная косметика",
-      "image": "assets/images/test-2.jpg",
-      "name": "Тушь для ресниц",
-      "description": "10/20",
-      "price": 27.00,
-      "inStock": 1
+    "id": 5,
+    "category": "декоративная косметика",
+    "image": "assets/images/test-2.jpg",
+    "name": "Тушь для ресниц",
+    "description": "10/20",
+    "price": 27.00,
+    "inStock": 1
   }];
 
   totalUnitOfProductions() {
@@ -73,3 +71,17 @@ export class AppComponent {
     return sum;
   }
 }
+
+// @Pipe({
+//   name: 'myfilter',
+//   pure: false
+// })
+// export class MyFilterPipe implements PipeTransform {
+//   transform(unitOfProductions: any[], filter: Object): any {
+//     if (!unitOfProductions || !filter) {
+//       return unitOfProductions;
+//     }
+//     // filter items array, items which match and return true will be kept, false will be filtered out
+//     return unitOfProductions.filter(unitOfProduction => unitOfProduction.title.indexOf(filter.category) !== -1);
+//   }
+// }
