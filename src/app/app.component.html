@@ -1,6 +1,6 @@
 <h2>{{title}}</h2>
-<select class="form-control">
-  <option ng-value="unitOfProduction.category" ng-repeat="unitOfProduction in unitOfProductions" ng-bind="unitOfProduction.category"></option>
+<select class="form-control" ng-model="selectTag">
+  <option ng-repeat="tag in tags" ng-bind="tag.name"></option>
 </select>
 <p>Общее количество продукции: {{totalUnitOfProductions()}}.</p>
 <table class="table table-bordered">

@@ -8,7 +8,15 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'Склад';
+
+  tags = [
+    {name:'уход за кожей лица'},
+    {name:'декоративная косметика'},
+    {name:'парфюмерия'}
+  ];
   
+  selectTag = null;
+
   unitOfProductions = [{
     "id": 1,
     "category": "уход за кожей лица",
