@@ -3,7 +3,7 @@
   <option ng-repeat="tag in tags" ng-bind="tag.name"></option>
 </select>
 <p>Общее количество продукции: {{totalUnitOfProductions()}}.</p>
-<table ng-repeat="cat in unitOfProductions | filter :selectTag" class="table table-bordered">
+<table ng-repeat="tag in unitOfProductions | filter :selectTag" class="table table-bordered">
   <thead>
   <tr>
     <th>id</th>
