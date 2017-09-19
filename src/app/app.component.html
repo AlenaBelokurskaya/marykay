@@ -1,4 +1,7 @@
 <h2>{{title}}</h2>
+<select class="form-control">
+  <option ng-value="unitOfProduction.category" ng-repeat="unitOfProduction in unitOfProductions" ng-bind="unitOfProduction.category"></option>
+</select>
 <p>Общее количество продукции: {{totalUnitOfProductions()}}.</p>
 <table class="table table-bordered">
   <thead>

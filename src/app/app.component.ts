@@ -44,6 +44,15 @@ export class AppComponent {
     "description": "05/18",
     "price": 33.00,
     "inStock": 0
+  },
+  {
+      "id": 5,
+      "category": "декоративная косметика",
+      "image": "assets/images/test-2.jpg",
+      "name": "Тушь для ресниц",
+      "description": "10/20",
+      "price": 27.00,
+      "inStock": 1
   }];
 
   totalUnitOfProductions() {
