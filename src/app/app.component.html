@@ -1,6 +1,7 @@
 <h2>{{title}}</h2>
-<select class="form-control">
-  <option *ngFor="let tag in tags" [ngValue]="categoty"></option>
+<select class="form-control" >
+  <option [ngValue]="null">Категория</option>
+  <option *ngFor="let tag in tags" [ngValue]="category">{{tags.category}}</option>
 </select>
 <p>Общее количество продукции: {{totalUnitOfProductions()}}.</p>
 <table class="table table-bordered">
