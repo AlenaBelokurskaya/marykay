@@ -1,7 +1,7 @@
 <h2>{{title}}</h2>
 <select class="form-control" >
-  <option [ngValue]="null">Категория</option>
-  <option *ngFor="let tag in tags" [ngValue]="category">{{tags.category}}</option>
+  <option value="null">Категория</option>
+  <option *ngFor="let tag of tags" [ngValue]="tag.category">{{tag.category}}</option>
 </select>
 <p>Общее количество продукции: {{totalUnitOfProductions()}}.</p>
 <table class="table table-bordered">
@@ -17,8 +17,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let unitOfProduction of unitOfProductions">
-  <!--<tr *ngFor="let unitOfProduction of unitOfProductions | myfilter:tags">-->
+  <tr *ngFor="let unitOfProduction of unitOfProductions | myfilter:tags">
     <td>{{unitOfProduction.id}}</td>
     <td>{{unitOfProduction.category}}</td>
     <td><img width="50px;" src="{{unitOfProduction.image}}"></td>
