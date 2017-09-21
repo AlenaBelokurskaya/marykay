@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Склад';
 
+  category = null;
+
   tags = [
     {category:'уход за кожей лица'},
     {category:'декоративная косметика'},

@@ -1,5 +1,5 @@
 <h2>{{title}}</h2>
-<select class="form-control" >
+<select class="form-control" [(ngModel)]="category">
   <option value="null">Категория</option>
   <option *ngFor="let tag of tags" [ngValue]="tag.category">{{tag.category}}</option>
 </select>
@@ -17,7 +17,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let unitOfProduction of (unitOfProductions | myfilter:category">
+  <tr *ngFor="let unitOfProduction of (unitOfProductions | myfilter:category)">
     <td>{{unitOfProduction.id}}</td>
     <td>{{unitOfProduction.category}}</td>
     <td><img width="50px;" src="{{unitOfProduction.image}}"></td>
