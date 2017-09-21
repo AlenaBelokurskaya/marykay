@@ -17,7 +17,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let unitOfProduction of unitOfProductions | myfilter:tags">
+  <tr *ngFor="let unitOfProduction of (unitOfProductions | myfilter:category">
     <td>{{unitOfProduction.id}}</td>
     <td>{{unitOfProduction.category}}</td>
     <td><img width="50px;" src="{{unitOfProduction.image}}"></td>
