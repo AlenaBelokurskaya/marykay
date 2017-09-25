@@ -6,6 +6,4 @@ export class Item {
     description: string;
     price: number;
     inStock: number;
-
-    items: Item[];
 }
