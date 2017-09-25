@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Catalog, Item } from './catalog/catalog';
 
 @Component({
   selector: 'app-root',
@@ -73,3 +74,7 @@ export class AppComponent {
     return sum;
   }
 }
+
+export const Catalog : Catalog[] = [
+  new Catalog(items)
+];

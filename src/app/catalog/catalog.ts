@@ -11,6 +11,10 @@ export class Item {
 export class Catalog {
     items: Item[];
 
+    constructor(items: Items[]) {
+        this.items = items;
+    }
+
     public addItem (item: Item) : void{
         this.items.push(item);
     }
