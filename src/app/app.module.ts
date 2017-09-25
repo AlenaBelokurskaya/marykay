@@ -3,12 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CategoryFilterPipe } from './filter/filter-category';
 
-import { Item } from './catalog/catalog';
+import { Item, Catalog } from './catalog/catalog';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
     Item,
+    Catalog,
     AppComponent,
     CategoryFilterPipe
   ],

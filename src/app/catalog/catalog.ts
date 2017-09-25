@@ -7,3 +7,9 @@ export class Item {
     price: number;
     inStock: number;
 }
+
+export class Catalog {
+    items: Item[];
+
+    addItem;
+}
