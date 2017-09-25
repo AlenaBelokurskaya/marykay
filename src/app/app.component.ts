@@ -18,14 +18,14 @@ export class AppComponent {
   ];
 
   unitOfProductions = [{
-    id: 1,
-    category: "уход за кожей лица",
-    image: "assets/images/test-1.jpg",
-    name: "Очищающий гель Botanical Effects",
-    description: "10/18",
-    price: 27.00,
-    inStock: 5
-  },
+      id: 1,
+      category: "уход за кожей лица",
+      image: "assets/images/test-1.jpg",
+      name: "Очищающий гель Botanical Effects",
+      description: "10/18",
+      price: 27.00,
+      inStock: 5
+    },
     {
       id: 2,
       category: "уход за кожей лица",
@@ -61,7 +61,7 @@ export class AppComponent {
       description: "10/20",
       price: 27.00,
       inStock: 1
-    }];
+  }];
 
   totalUnitOfProductions() {
     let sum = 0;
