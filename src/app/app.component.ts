@@ -75,6 +75,4 @@ export class AppComponent {
   }
 }
 
-export const Catalog : Catalog[] = [
-  new Catalog(items)
-];
+export const Catalog : Catalog = new Catalog(items);
