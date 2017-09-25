@@ -11,5 +11,7 @@ export class Item {
 export class Catalog {
     items: Item[];
 
-    addItem;
+    public addItem (item: Item) : void{
+        this.items.push(item);
+    }
 }
