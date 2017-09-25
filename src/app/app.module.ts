@@ -18,7 +18,6 @@ import { AppComponent } from './app.component';
   ],
   providers: [],
   bootstrap: [
-    AppCatalog,
     AppComponent
   ]
 })
