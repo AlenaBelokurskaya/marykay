@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CategoryFilterPipe } from './filter/filter-category';
 
+import { Item } from './catalog/catalog';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
+    Item,
     AppComponent,
     CategoryFilterPipe
   ],
@@ -15,6 +17,9 @@ import { AppComponent } from './app.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppCatalog,
+    AppComponent
+  ]
 })
 export class AppModule { }
