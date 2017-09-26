@@ -12,7 +12,7 @@ export class Item {
 export class Catalog {
     items: Item[];
 
-    constructor(items: Items[]) {
+    constructor(items: Item[]) {
         this.items = items;
     }
 
