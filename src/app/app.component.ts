@@ -19,7 +19,7 @@ export class AppComponent {
     {category:'парфюмерия'}
   ];
 
-  unitOfProductions = [{
+  items = [{
       id: 1,
       category: "уход за кожей лица",
       image: "assets/images/test-1.jpg",
@@ -203,8 +203,8 @@ export class AppComponent {
   totalUnitOfProductions() {
     let sum = 0;
 
-    for (let unitOfProduction of this.unitOfProductions) {
-      sum += unitOfProduction.inStock;
+    for (let item of this.items) {
+      sum += item.inStock;
     }
 
     return sum;
