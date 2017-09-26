@@ -211,5 +211,4 @@ export class AppComponent {
   }
 }
 
-export let catalogInstance : Catalog = new Catalog(items);
-catalog = Catalog;
+let catalogInstance : Catalog = new Catalog(items);
