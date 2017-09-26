@@ -3,6 +3,7 @@ export class Item {
     category: string;
     image: string;
     name: string;
+    mass: string;
     description: string;
     price: number;
     inStock: number;
