@@ -200,6 +200,8 @@ export class AppComponent {
       inStock: 1
   }];
 
+  catalogInstance : Catalog = new Catalog(this.items);
+
   totalUnitOfProductions() {
     let sum = 0;
 
@@ -210,5 +212,3 @@ export class AppComponent {
     return sum;
   }
 }
-
-let catalogInstance : Catalog = new Catalog(items);
