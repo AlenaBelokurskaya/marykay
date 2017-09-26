@@ -4,11 +4,11 @@ import { Pipe, PipeTransform  } from '@angular/core';
     name: 'categoryFilter'
 })
 export class CategoryFilterPipe implements PipeTransform {
-    transform(unitOfProductions: any[], category: string): any {
-        if (!unitOfProductions || !category) {
-            return unitOfProductions;
+    transform(items: any[], category: string): any {
+        if (!items || !category) {
+            return items;
         }
         
-        return unitOfProductions.filter(unitOfProduction => unitOfProduction.category.indexOf(category) !== -1);
+        return items.filter(item => item.category.indexOf(category) !== -1);
     }
 }
