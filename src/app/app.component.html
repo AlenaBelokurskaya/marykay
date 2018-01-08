@@ -14,6 +14,7 @@
     <th>Масса</th>
     <th>Цена</th>
     <th>Количество</th>
+    <th></th>
   </tr>
   </thead>
   <tbody>
@@ -26,6 +27,13 @@
     <td>{{item.price | currency:'BYN':true}}</td>
     <td *ngIf="item.inStock > 0">{{item.inStock}}</td>
     <td *ngIf="item.inStock === 0">нет на складе</td>
+    <td>
+      <div class="select-quantity">
+        <button class="decrease" (click)="downQuantity(item)">-</button>
+        {{item.quantity}}
+        <button class="increase" (click)="upQuantity(item)">+</button>
+      </div>
+    </td>
   </tr>
   </tbody>
 </table>
