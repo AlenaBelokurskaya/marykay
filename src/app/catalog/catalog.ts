@@ -6,6 +6,7 @@ export class Item {
     mass: string;
     price: number;
     inStock: number;
+    quantity: number;
 }
 
 export class Catalog {

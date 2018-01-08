@@ -19,6 +19,15 @@ export class AppComponent {
     {category:'парфюмерия'}
   ];
 
+  upQuantity(item) {
+      if (item.quantity < item.inStock) item.quantity++;
+  }
+
+
+  downQuantity(item) {
+      if (item.quantity != 0) item.quantity--;
+  }
+
   items = [{
       id: 1,
       category: "уход за кожей лица",
@@ -26,7 +35,8 @@ export class AppComponent {
       name: "Очищающий гель Botanical Effects",
       mass: "127 g",
       price: 27.00,
-      inStock: 5
+      inStock: 5,
+      quantity: 0
     },
     {
       id: 2,
@@ -35,7 +45,8 @@ export class AppComponent {
       name: "Тонизирующий скраб Botanical Effects",
       mass: "127 g",
       price: 33.00,
-      inStock: 2
+      inStock: 2,
+      quantity: 0
     },
     {
       id: 3,
@@ -44,7 +55,8 @@ export class AppComponent {
       name: "Освежающий тоник Botanical Effects",
       mass: "127 g",
       price: 27.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 4,
@@ -53,7 +65,8 @@ export class AppComponent {
       name: "Увлажняющий гель Botanical Effects",
       mass: "127 g",
       price: 33.00,
-      inStock: 0
+      inStock: 0,
+      quantity: 0
     },
     {
       id: 6,
@@ -62,7 +75,8 @@ export class AppComponent {
       name: "Очищающее средство TimeWise '3 в 1'",
       mass: "88 g",
       price: 38.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 6,
@@ -71,7 +85,8 @@ export class AppComponent {
       name: "Увлажняющий крем, препятствующий старению кожи TimeWise",
       mass: "127 g",
       price: 70.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 6,
@@ -80,7 +95,8 @@ export class AppComponent {
       name: "Очищающая пенка Volu-Firm против заметных признаков старения",
       mass: "127 g",
       price: 33.5,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 6,
@@ -89,7 +105,8 @@ export class AppComponent {
       name: "Лифтинг-сыворотка Volu-Firm против заметных признаков старения",
       mass: "29 g",
       price: 117.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 6,
@@ -98,7 +115,8 @@ export class AppComponent {
       name: "Дневной крем с SPF 30 Volu-Firm против заметных признаков старения",
       mass: "48 g",
       price: 75.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 6,
@@ -107,7 +125,8 @@ export class AppComponent {
       name: "Ночной крем с  ретинолом Volu-Firm против заметных признаков старения",
       mass: "48 g",
       price: 75.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 6,
@@ -116,7 +135,8 @@ export class AppComponent {
       name: "Обновляющий крем для кожи вокруг глаз Volu-Firm против заметных признаков старения",
       mass: "14 g",
       price: 70.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 6,
@@ -125,7 +145,8 @@ export class AppComponent {
       name: "Крем-филлер для глубоких морщин Volu-Firm против заметных признаков старения",
       mass: "14 g",
       price: 78.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 5,
@@ -134,7 +155,8 @@ export class AppComponent {
       name: "Пилинг для лица Revealing Radiance против заметных признаков старения",
       mass: "48 g",
       price: 123.00,
-      inStock: 0
+      inStock: 0,
+      quantity: 0
     },
     {
       id: 6,
@@ -143,7 +165,8 @@ export class AppComponent {
       name: "Система для пилинга лица TimeWise",
       mass: "-",
       price: 82.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 7,
@@ -152,7 +175,8 @@ export class AppComponent {
       name: "Обновляющий пилинг TimeWise",
       mass: "70 g",
       price: 40.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 8,
@@ -161,7 +185,8 @@ export class AppComponent {
       name: "Сыворотка для сужения пор TimeWise",
       mass: "29 g",
       price: 46.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 9,
@@ -170,7 +195,8 @@ export class AppComponent {
       name: "Сыворотка для коррекции тона кожи TimeWise",
       mass: "29 g",
       price: 68.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 10,
@@ -179,7 +205,8 @@ export class AppComponent {
       name: "Маска для коррекции тона кожи TimeWise",
       mass: "85 g",
       price: 36.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 11,
@@ -188,7 +215,8 @@ export class AppComponent {
       name: "Щетка для глубокого очищения лица Skinvigorate",
       mass: "-",
       price: 97.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
     },
     {
       id: 12,
@@ -197,7 +225,8 @@ export class AppComponent {
       name: "Тушь для ресниц",
       mass: "127 g",
       price: 27.00,
-      inStock: 1
+      inStock: 1,
+      quantity: 0
   }];
 
   catalog : Catalog = new Catalog(this.items);
