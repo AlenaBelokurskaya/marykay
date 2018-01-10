@@ -30,7 +30,7 @@
     <td>
       <div class="select-quantity">
         <button class="decrease" (click)="downQuantity(item)">-</button>
-        {{item.quantity}}
+        <input class="number" type="text" [(ngModel)]="item.quantity">
         <button class="increase" (click)="upQuantity(item)">+</button>
       </div>
     </td>
