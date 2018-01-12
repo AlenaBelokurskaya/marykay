@@ -15,6 +15,7 @@
     <th>Цена</th>
     <th>Количество</th>
     <th></th>
+    <th></th>
   </tr>
   </thead>
   <tbody>
@@ -33,6 +34,9 @@
         <input class="number" type="text" [(ngModel)]="item.quantity">
         <button class="increase" (click)="upQuantity(item)">+</button>
       </div>
+    </td>
+    <td>
+      <a (click)="deleteItem(item.id)">delete</a>
     </td>
   </tr>
   </tbody>
