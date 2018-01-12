@@ -23,12 +23,11 @@ export class AppComponent {
       if (item.quantity < item.inStock) item.quantity++;
   }
 
-
   downQuantity(item) {
       if (item.quantity != 0) item.quantity--;
   }
 
-  items = [{
+items = [{
       id: 1,
       category: "уход за кожей лица",
       image: "assets/images/test-1.jpg",
@@ -69,7 +68,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 6,
+      id: 5,
       category: "уход за кожей лица",
       image: "assets/images/test-2.jpg",
       name: "Очищающее средство TimeWise '3 в 1'",
@@ -89,7 +88,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 6,
+      id: 7,
       category: "уход за кожей лица",
       image: "assets/images/test-2.jpg",
       name: "Очищающая пенка Volu-Firm против заметных признаков старения",
@@ -99,7 +98,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 6,
+      id: 8,
       category: "уход за кожей лица",
       image: "assets/images/test-2.jpg",
       name: "Лифтинг-сыворотка Volu-Firm против заметных признаков старения",
@@ -109,7 +108,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 6,
+      id: 9,
       category: "уход за кожей лица",
       image: "assets/images/test-2.jpg",
       name: "Дневной крем с SPF 30 Volu-Firm против заметных признаков старения",
@@ -119,7 +118,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 6,
+      id: 10,
       category: "уход за кожей лица",
       image: "assets/images/test-2.jpg",
       name: "Ночной крем с  ретинолом Volu-Firm против заметных признаков старения",
@@ -129,7 +128,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 6,
+      id: 11,
       category: "уход за кожей лица",
       image: "assets/images/test-2.jpg",
       name: "Обновляющий крем для кожи вокруг глаз Volu-Firm против заметных признаков старения",
@@ -139,7 +138,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 6,
+      id: 12,
       category: "уход за кожей лица",
       image: "assets/images/test-2.jpg",
       name: "Крем-филлер для глубоких морщин Volu-Firm против заметных признаков старения",
@@ -149,7 +148,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 5,
+      id: 13,
       category: "дополнительные средства для ухода за кожей лица",
       image: "assets/images/test-2.jpg",
       name: "Пилинг для лица Revealing Radiance против заметных признаков старения",
@@ -159,7 +158,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 6,
+      id: 14,
       category: "дополнительные средства для ухода за кожей лица",
       image: "assets/images/test-2.jpg",
       name: "Система для пилинга лица TimeWise",
@@ -169,7 +168,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 7,
+      id: 15,
       category: "дополнительные средства для ухода за кожей лица",
       image: "assets/images/test-2.jpg",
       name: "Обновляющий пилинг TimeWise",
@@ -179,7 +178,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 8,
+      id: 16,
       category: "дополнительные средства для ухода за кожей лица",
       image: "assets/images/test-2.jpg",
       name: "Сыворотка для сужения пор TimeWise",
@@ -189,7 +188,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 9,
+      id: 17,
       category: "дополнительные средства для ухода за кожей лица",
       image: "assets/images/test-2.jpg",
       name: "Сыворотка для коррекции тона кожи TimeWise",
@@ -199,7 +198,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 10,
+      id: 18,
       category: "дополнительные средства для ухода за кожей лица",
       image: "assets/images/test-2.jpg",
       name: "Маска для коррекции тона кожи TimeWise",
@@ -209,7 +208,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 11,
+      id: 19,
       category: "дополнительные средства для ухода за кожей лица",
       image: "assets/images/test-2.jpg",
       name: "Щетка для глубокого очищения лица Skinvigorate",
@@ -219,7 +218,7 @@ export class AppComponent {
       quantity: 0
     },
     {
-      id: 12,
+      id: 20,
       category: "декоративная косметика",
       image: "assets/images/test-2.jpg",
       name: "Тушь для ресниц",
@@ -229,12 +228,16 @@ export class AppComponent {
       quantity: 0
   }];
 
+  deleteItem(id) {
+      this.catalog.items = this.catalog.items.filter(item => item.id !== id );
+  }
+
   catalog : Catalog = new Catalog(this.items);
 
   totalUnitOfProductions() {
     let sum = 0;
 
-    for (let item of this.items) {
+    for (let item of this.catalog.items) {
       sum += item.inStock;
     }
 
